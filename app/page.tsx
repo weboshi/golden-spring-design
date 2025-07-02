@@ -1,103 +1,189 @@
 import Image from "next/image";
+import Navigation from "./components/navigation";
+import Footer from "./components/footer";
+import * as motion from "motion/react-client";
+import Transform from "../public/images/transform.jpg";
+import TransformTwo from "../public/images/transform-1.jpg";
+import FunctionOne from "../public/images/function-1.jpg";
+import FunctionTwo from "../public/images/function-2.jpg";
+import FunctionThree from "../public/images/function-3.jpg";
+import FunctionFour from "../public/images/function-4.jpg";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main>
+      < Navigation />
+      <section className="block home">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <div className="block-inner right">
+            <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeInOut", duration: 0.75 }
+            }>
+            <h1>Golden Spring Designs</h1>
+            <p>Premium Shower Door Design & Manufacturing</p>
+            </motion.div>
+
+          </div>
+      </section>
+      <section className="block function">
+        <div className="block-inner left">
+          <motion.div className="block-content"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeInOut", duration: 0.75 }
+            }
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <h2>Beauty Meets Function</h2>
+
+            <p>Our shower doors are designed to deliver both sophisticated elegance and seamless everyday functionality.</p>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="block-inner right">
+          <motion.div className="block-content"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeInOut", duration: 0.75 }
+            }
+          >
+            <Image src={FunctionOne}
+              alt=""
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }} />
+          </motion.div>
+
+
+        </div>
+      </section>
+      <section className="three-block">
+        <motion.div className="three-block-single"
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeInOut", duration: 0.75, delay: .5 }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="single-upper">
+            <Image src={FunctionTwo}
+              className="door-image"
+              alt=""
+              sizes="100vw"
+              style={{
+                width: 'auto',
+                height: '300px',
+              }} />
+          </div>
+          <div className="single-copy">
+            <h3>Sculpted and Engineered</h3>
+            <p>Sophisticated style with premium finishes engineered for any environment</p>
+          </div>
+        </motion.div>
+        <motion.div className="three-block-single"
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeInOut", duration: 0.75, delay: .75 }
+        }>
+          <div className="single-upper">
+            <Image src={FunctionThree}
+              className="door-image"
+              alt=""
+              sizes="100vw"
+              style={{
+                width: 'auto',
+                height: '300px',
+              }} />
+          </div>
+          <div className="single-copy">
+            <h3>Smart Handle Design</h3>
+            <p>Elegantly designed handles that double as towel holders for convenient access</p>
+          </div>
+        </motion.div>
+        <motion.div className="three-block-single"
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: "easeInOut", duration: 0.75, delay: 1 }
+        }>
+          <div className="single-upper">
+            <Image src={FunctionFour}
+              className="door-image"
+              alt=""
+              sizes="100vw"
+              style={{
+                width: 'auto',
+                height: '300px',
+              }} />
+          </div>
+          <div className="single-copy">
+            <h3>Leak-Proof Glass Panels</h3>
+            <p>Adhesive strips prevent overflow with smooth, effortless operation</p>
+
+          </div>
+        </motion.div>
+      </section>
+      
+      <section className="block eco">
+        <div className="block-inner left">
+        </div>
+        <div className="block-inner right">
+          <motion.div className="block-content"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeInOut", duration: 0.75 }
+            }
+          >
+            <h2>ECO-FRIENDLY</h2>
+            <p>Our shower doors are crafted with commitment to environmental safety standards</p>
+            <ul>
+              <li>Reduced carbon footprint</li>
+              <li>Renewable energy integration</li>
+              <li>Non-toxic materials and finishes</li>
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+      <section className="block transform">
+        <div className="block-inner left">
+          <motion.div className="block-content"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeInOut", duration: 0.75 }
+            }
+          >
+            <h2>Contour with Warmth</h2>
+            <p>Transform your shower space into a tranquil retreat with our versatile designs that complement any bathroom layout</p>
+          </motion.div>
+        </div>
+        <div className="block-inner right">
+          <motion.div className="block-content"
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeInOut", duration: 0.75 }
+            }
+          >
+            <Image src={Transform}
+              alt=""
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }} />
+          </motion.div>
+
+        </div>
+      </section>
+      <Footer/>
+    </main>
   );
 }

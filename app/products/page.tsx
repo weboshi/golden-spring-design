@@ -1,14 +1,39 @@
 import Image from "next/image";
 import Navigation from "../components/navigation";
 import Footer from "../components/footer";
-
+import Link from "next/link";
 import Spacer from "../components/spacer";
 import * as motion from "motion/react-client";
-import products from "./products.json";
-import FunctionOne from "../../public/images/function-1.jpg";
-import FunctionTwo from "../../public/images/function-2.jpg";
-import FunctionThree from "../../public/images/function-3.jpg";
+import productsData from "./products.json";
+import type { Product as productsInterface} from "./productsInterface";
 
+const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+};
+  
+const productVariants = {
+    hidden: { 
+        opacity: 0, 
+        y: 30,
+    },
+    show: { 
+        opacity: 1, 
+        y: 0,
+        scale: 1,
+        transition: {
+            duration: 0.6
+        }
+    }
+};
+
+const products: productsInterface[] = productsData.products as productsInterface[];
 
 export default function Products() {
     return (
@@ -17,54 +42,45 @@ export default function Products() {
             <Spacer />
             <div className="products-container">
                 <h1>Our Products</h1>
-                {/* {products && products.products.map((product, i) => (
-                    <div key={i} className="products-block">
-                        <div className="products-block-left">
-                            <h2>{product.model}</h2>
-                            <span>Thickness: {product.thickness}</span>
-                            <span>Height: {product.height}</span>
-                            <span>Adjustment: {product.adjustment}</span>
-                            <span>{product.reversible && "Reversible"}</span>
-                            <span>{product.magnetic && "Magnetic"}</span>
-                            <span>Profile: {product.profile}</span>
-                        </div>
-                        <div className="products-block-right">
-                            <div className="products-top">
-                                <div>
+                <motion.div 
+                    className="products-grid"
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="show"
+                >
+                    {products && products.map((product, i) => (
+                        <Link 
+                            key={product.model} 
+                            href={{
+                                pathname: `/products/${product.model}`
+                            }}
+                        >
+                            <motion.div 
+                                variants={productVariants}
+                                whileHover={{ 
+                                    scale: 1.05,
+                                    transition: { duration: 0.2 }
+                                }}
+                                whileTap={{ scale: 0.98 }}
+                                className="products-block"
+                            >
+                                <div className="products-block-top">
                                     <Image
-                                        src={product.images[0]}
-                                        alt=""
+                                        src={product.images[0].src}
+                                        alt={product.images[0].alt || product.model}
                                         sizes="100vw"
-                                        fill={true}
+                                        fill={true} 
                                     />
                                 </div>
-                            </div>
-                            <div className="products-bottom">
-                                <div>
-                                    <Image
-                                    src={product.images[1]}
-                                    alt=""
-                                    sizes="100vw"
-                                    fill={true}
-                                /></div>
-                                <div>
-                                    {product.images[2].src && 
-                                    <Image
-                                    src={product.images[2]}
-                                    alt=""
-                                    sizes="100vw"
-                                    fill={true}
-                                />}
-                                    
+                                <div className="products-block-bottom">
+                                    <span>{product.model}</span>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                ))} */}
+                            </motion.div>
+                        </Link>    
+                    ))}
+                </motion.div>
             </div>
             <Footer />
         </main>
     );
 }
-
-

@@ -38,9 +38,11 @@ const productVariants = {
 const imageVariants = {
     hidden: {
         opacity: 0,
+        scale: 1.1
     },
     show: {
         opacity: 1,
+        scale: 1,
         transition: {
             duration: 0.8,
             ease: "easeOut"
@@ -75,13 +77,14 @@ async function getProduct(slug: string): Promise<Product | null> {
 }
 
 interface ProductPageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 export default async function ProductsPage({ params }: ProductPageProps) {
-    const product = await getProduct(params.slug);
+    const { slug } = await params;
+    const product = await getProduct(slug);
 
     if (!product) {
         // In App Router, you can use notFound() function
@@ -100,7 +103,9 @@ export default async function ProductsPage({ params }: ProductPageProps) {
                 initial="hidden"
                 animate="show"
             >
+                <motion.div variants={productVariants}>
                     <Link href="/products" className="slug-link">Back to Products</Link>
+                </motion.div>
 
                 <motion.div 
                     className="products-block products-slug"

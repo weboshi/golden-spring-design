@@ -191,6 +191,294 @@
             "height": "100%"
           }
         ]
+      },
+      {
+        "model": "PE-S121B",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "25mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/PE-S121B-1.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/PE-S121B-2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": null,
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "PE-S121B-SP",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "15mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/PE-S121B-SP_B.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/PE-S121B-SP_B2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": null,
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "PT-S121B",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "25mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/PT-S121B-1.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/PT-S121B-2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": "/images/products/PT-S121B-3.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "PT-S121B-SP",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "15mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/PT-S121B-SP-1.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/PT-S121B-SP-2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": "/images/products/PT-S121B-SP-3.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "PT-S121B-4",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "25mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/PT-S121B-4-1.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/PT-S121B-4-2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": null,
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "PT-S121B-4-SP",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "25mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/PT-S121B-4-SP-1.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/PT-S121B-4-SP-2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": "/images/products/PT-S121B-4-SP-3.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "VS-H121B",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "25mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/VS-H121-01A_B.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/VS-H121-01A_B2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": null,
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "VS-H731B",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "15mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/VS-H731-01A_B.jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/VS-H731-01A_B2.jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": null,
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
+      },
+      {
+        "model": "VT-S721",
+        "thickness": ["8", "10"],
+        "height": "75",
+        "adjustment": "15mm",
+        "reversible": true,
+        "magnetic": true,
+        "profile": "SUS 304",
+        "images": [
+          {
+            "id": 1,
+            "src": "/images/products/VT-S721_B[1].jpg",
+            "alt": "Shower Door",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 2,
+            "src": "/images/products/VT-S721_B2[1].jpg",
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          },
+          {
+            "id": 3,
+            "src": null,
+            "alt": "Shower",
+            "width": "auto",
+            "height": "100%"
+          }
+        ]
       }
   ]
 }

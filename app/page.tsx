@@ -8,6 +8,11 @@ import FunctionOne from "../public/images/function-1.jpg";
 import FunctionTwo from "../public/images/function-2.jpg";
 import FunctionThree from "../public/images/function-3.jpg";
 import FunctionFour from "../public/images/function-4.jpg";
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Golden Spring Designs | Premium Shower Door Design & Manufacturing',
+};
 
 
 export default function Home() {

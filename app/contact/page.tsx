@@ -23,7 +23,7 @@ export default function Contact() {
                         transition={{ ease: "easeInOut", duration: 0.75 }}
                     >
                         <h1 className="left-header">Contact Us</h1>
-                        <p>For quotes or inquiries, contact support@goldensprings.com</p>
+                        <p>For quotes or inquiries, contact support@goldenspringdesigns.com</p>
                     </motion.div>
                 </div>
                 <div className="block-inner right">

@@ -11,19 +11,19 @@ export default function Navigation() {
             </div>
             <ul>
                 <li>
-                    <Link href="/">Home</Link>
+                    <Link className="underline-hover" href="/">Home</Link>
                 </li>
                 <li>
-                    <Link href="/products">Products</Link>
+                    <Link className="underline-hover" href="/products">Products</Link>
                 </li>
                 <li>
-                    <Link href="/catalog">Catalog</Link>
+                    <Link className="underline-hover" href="/catalog">Catalog</Link>
                 </li>
                 <li>
-                    <Link href="/about">About</Link>
+                    <Link className="underline-hover" href="/about">About</Link>
                 </li>
                 <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link className="underline-hover" href="/contact">Contact</Link>
                 </li>
             </ul>
         </div>

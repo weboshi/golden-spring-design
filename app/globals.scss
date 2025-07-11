@@ -574,11 +574,8 @@ h1 {
 
   .single-upper {
     margin-bottom: 1rem;
-
-    @include phone-only {
-      img {
-        margin: 0 auto;
-      }
+    img {
+      margin: 0 auto;
     }
   }
 }

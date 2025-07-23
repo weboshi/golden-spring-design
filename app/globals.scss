@@ -59,20 +59,54 @@ $desktop-up: "(min-width: #{$desktop-min})";
 }
 
 h1 {
-  font-size: 2.5rem;
   font-weight: bold;
+  @media #{$phone-only} {
+    font-size: 2rem;
+  }
+  @media #{$tablet-up} {
+  }
+  @media #{$tablet-only} {
+    font-size: 2.5rem;
+  }
+  @media #{$desktop-up} {
+    font-size: 2.5rem;
+  }
 }
 
 /* ~40px */
 h2 {
-  font-size: 2rem;
   font-weight: bold;
+  @media #{$phone-only} {
+    font-size: 1.25rem;
+  }
+  @media #{$tablet-up} {
+    font-size: 2.5rem;
+  }
+  @media #{$tablet-only} {
+    font-size: 2.5rem;
+  }
+  @media #{$desktop-up} {
+    font-size: 2rem;
+  }
 }
 
 /* ~32px */
 h3 {
   font-size: 1.75rem;
   font-weight: bold;
+  font-weight: bold;
+  @media #{$phone-only} {
+    font-size: 1.5rem;
+  }
+  @media #{$tablet-up} {
+    font-size: 2.5rem;
+  }
+  @media #{$tablet-only} {
+    font-size: 2.5rem;
+  }
+  @media #{$desktop-up} {
+    font-size: 1.75rem;
+  }
 }
 
 /* ~28px */
@@ -177,6 +211,9 @@ body {
 
   .mobile-navigation {
     display: none;
+    background-color: white;
+    z-index: 999;
+    height: 100%;
 
     @include phone-only {
       padding-left: 1rem;
@@ -361,7 +398,11 @@ h1 {
 
     h1 {
       text-transform: uppercase;
-      font-size: 3rem
+      font-size: 3rem;
+
+      @include phone-only {
+        font-size: 2.5rem;
+      }
     }
 
     .block-inner.right {
@@ -380,7 +421,12 @@ h1 {
       text-transform: uppercase;
       font-weight: bold;
       font-size: 2rem;
+
+      @include phone-only {
+        font-size: 1rem;
+      }
     }
+
     @include phone-only {
       height: 70vh;
     }
@@ -574,6 +620,7 @@ h1 {
 
   .single-upper {
     margin-bottom: 1rem;
+
     img {
       margin: 0 auto;
     }
@@ -606,20 +653,14 @@ h1 {
 }
 
 .products-container {
+  padding: 5rem;
   background-color: white;
-  padding: 3rem 0;
-
   h1 {
     font-size: 3rem;
     text-align: center;
     color: black;
     margin: 0;
   }
-}
-
-.products-container {
-  padding: 5rem;
-
   .slug-link {
     font-weight: bold;
     text-align: left;
@@ -633,6 +674,9 @@ h1 {
       opacity: 0.7;
     }
   }
+  @include phone-only {
+    padding: 2rem;
+  }
 }
 
 .products-grid {
@@ -640,6 +684,9 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
+  @include phone-only {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .products-block {
@@ -649,6 +696,10 @@ h1 {
   background-color: white;
   color: black;
   flex-direction: column;
+
+  @include phone-only {
+    height: 150px;
+  }
 
 
   &.products-slug {
@@ -679,6 +730,9 @@ h1 {
 
     span {
       font-size: 2rem;
+      @include phone-only {
+        font-size: 1.25rem;
+      }
     }
   }
 

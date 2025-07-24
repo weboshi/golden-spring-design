@@ -354,7 +354,7 @@ h1 {
       &.right {
         padding: 5rem 5rem 5rem 0;
         @include phone-only {
-          padding: 0;
+          padding: 0 0 1rem 0;
         }
         img {
           filter: brightness(50%);
@@ -397,9 +397,10 @@ h1 {
         display: flex;
         justify-content: space-between;
 
-        img:first-child {
+        div:first-child {
           margin-right: 1rem;
         }
+
       }
     }
   }
@@ -526,7 +527,7 @@ h1 {
     padding: 5rem;
 
     @include phone-only {
-      padding: 2rem 0;
+      padding: .5rem 0;
       flex-wrap: nowrap;
       flex-direction: column-reverse;
       height: auto;
@@ -630,6 +631,7 @@ h1 {
     }
     @include phone-only {
       flex-direction: column-reverse;
+      padding: 2rem 0;
     }
   }
 }

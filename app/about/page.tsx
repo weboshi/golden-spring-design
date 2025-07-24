@@ -21,18 +21,20 @@ export default function About() {
             <Spacer />
             <div className="block about-block">
                 <div className="block-inner left">
+
+                    <motion.div className="block-content"
+                        initial={{ x: -20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ ease: "easeInOut", duration: 0.75 }}
+                    >
+                        <h1 className="left-header">ABOUT GOLD</h1>
+                        <h1 className="mobile-header">ABOUT GOLDEN SPRINGS</h1>
+                    </motion.div>
                     <motion.div className="block-content"
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ ease: "easeInOut", duration: 0.75 }}
                     >
-                        <motion.div className="block-content"
-                            initial={{ y: -20, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            transition={{ ease: "easeInOut", duration: 0.75 }}
-                        >
-                            <h1 className="left-header">ABOUT GOLD</h1>
-                        </motion.div>
                         <p>
                             Golden Spring, headquartered in California, is a dedicated manufacturer specializing in high-quality shower doors. From concept and design to production, sales, and support, we offer complete solutions tailored for modern bathroom spaces.
                             <br /><br />
@@ -50,8 +52,8 @@ export default function About() {
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ ease: "easeInOut", duration: 0.75 }}>
                             <motion.div
-                                initial={{ y: -20, opacity: 0 }}
-                                animate={{ y: 0, opacity: 1 }}
+                                initial={{ x: 20, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
                                 transition={{ ease: "easeInOut", duration: 0.75 }}
                             >
                                 <h1>EN SPRING</h1>
@@ -97,7 +99,7 @@ export default function About() {
 
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </main>
     );
 }

@@ -321,22 +321,41 @@ h1 {
 
       &.left {
         padding: 5rem 0 5rem 5rem;
+        @include phone-only {
+          padding: 2rem;
+        }
 
-        h1 {
+        h1.left-header {
           font-size: 4rem;
           font-weight: 800;
           padding-top: 3rem;
           text-align: right;
+          @include phone-only {
+            display: none;
+          }
+        }
+
+        .mobile-header {
+          display: none;
+          @include phone-only {
+            font-size: 2rem;
+            display: block;
+          }
         }
 
         p {
           padding-right: 5rem;
+          @include phone-only {
+            padding: 0;
+          }
         }
       }
 
       &.right {
         padding: 5rem 5rem 5rem 0;
-
+        @include phone-only {
+          padding: 0;
+        }
         img {
           filter: brightness(50%);
         }
@@ -352,6 +371,9 @@ h1 {
           font-weight: 800;
           z-index: 999;
           padding-top: 3rem;
+          @include phone-only {
+            display: none;
+          }
 
         }
 
@@ -578,11 +600,17 @@ h1 {
     h1 {
       font-size: 4rem;
       margin-bottom: 0;
+      @include phone-only {
+        font-size: 2.5rem;
+      }
     }
 
     p {
       margin-bottom: 2rem;
       font-size: 1.5rem;
+      @include phone-only {
+        font-size: 1.25rem;
+      }
     }
 
     a {
@@ -599,6 +627,9 @@ h1 {
       &:hover {
         opacity: 0.7;
       }
+    }
+    @include phone-only {
+      flex-direction: column-reverse;
     }
   }
 }

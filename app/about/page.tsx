@@ -76,7 +76,7 @@ export default function About() {
                                     alt=""
                                     sizes="100vw"
                                     style={{
-                                        width: '100%',
+                                        width: 'auto',
                                         height: '100%',
                                     }} />
                             </motion.div>
@@ -87,8 +87,6 @@ export default function About() {
                                 <Image src={about3}
                                     alt=""
                                     style={{
-                                        width: '100%',
-                                        height: 'auto',
                                     }} />
 
                             </motion.div>

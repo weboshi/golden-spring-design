@@ -4,10 +4,13 @@ import Footer from "../components/footer";
 import Spacer from "../components/spacer";
 import * as motion from "motion/react-client";
 import ContactImage from "../../public/images/products/PC-S121B-SP-1.jpg"
+import { Metadata } from "next";
 
 
 
-
+export const metadata: Metadata = {
+    title: 'About',
+};
 
 
 export default function Contact() {

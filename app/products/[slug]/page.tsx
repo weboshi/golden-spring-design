@@ -9,6 +9,19 @@ import path from 'path';
 import { Product } from "../productsInterface";
 import { ImageObject } from "../productsInterface";
 
+// type Props = {
+//     params: Promise<{ id: string }>
+//     searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+//   }
+
+//   export function generateMetadata({ params, searchParams }: Props): Metadata {
+//     return {
+//       title: 'Next.js',
+//     }
+//   }
+
+//   export default function Page({ params, searchParams }: Props) {}
+
 const containerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -97,7 +110,7 @@ export default async function ProductsPage({ params }: ProductPageProps) {
         <main>
             <Navigation />
             <Spacer />
-            <motion.div 
+            <motion.div
                 className="products-container"
                 variants={containerVariants}
                 initial="hidden"
@@ -107,11 +120,11 @@ export default async function ProductsPage({ params }: ProductPageProps) {
                     <Link href="/products" className="slug-link">Back to Products</Link>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="products-block products-slug"
                     variants={containerVariants}
                 >
-                    <motion.div 
+                    <motion.div
                         className="products-block-left"
                         variants={productVariants}
                     >
@@ -123,12 +136,12 @@ export default async function ProductsPage({ params }: ProductPageProps) {
                         <span>{product.magnetic && "Magnetic"}</span>
                         <span>Profile: {product.profile}</span>
                     </motion.div>
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="products-block-right"
                         variants={containerVariants}
                     >
-                        <motion.div 
+                        <motion.div
                             className="products-top"
                             variants={imageVariants}
                         >
@@ -141,8 +154,8 @@ export default async function ProductsPage({ params }: ProductPageProps) {
                                 />
                             </div>
                         </motion.div>
-                        
-                        <motion.div 
+
+                        <motion.div
                             className="products-bottom"
                             variants={containerVariants}
                         >

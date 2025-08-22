@@ -4,6 +4,12 @@ import Footer from "../components/footer";
 import Spacer from "../components/spacer";
 import * as motion from "motion/react-client";
 import CatalogCover from "../../public/images/catalog.jpg";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+    title: 'Catalog',
+};
 
 
 export default function Catalog() {
@@ -31,12 +37,12 @@ export default function Catalog() {
                         transition={{ ease: "easeInOut", duration: 0.75 }}
                     >
                         <Image src={CatalogCover}
-                                alt=""
-                                sizes="100vw"
-                                style={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }} />
+                            alt=""
+                            sizes="100vw"
+                            style={{
+                                width: '100%',
+                                height: 'auto',
+                            }} />
                     </motion.div>
                 </div>
             </div>

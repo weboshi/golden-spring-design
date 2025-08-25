@@ -8,19 +8,52 @@ import fs from 'fs';
 import path from 'path';
 import { Product } from "../productsInterface";
 import { ImageObject } from "../productsInterface";
+import { Metadata } from "next";
 
-// type Props = {
-//     params: Promise<{ id: string }>
-//     searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-//   }
+// Define the page props interface
+interface PageProps {
+    params: {
+        slug: string
+    }
+}
 
-//   export function generateMetadata({ params, searchParams }: Props): Metadata {
-//     return {
-//       title: 'Next.js',
-//     }
-//   }
+// Type-safe metadata generation
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params
 
-//   export default function Page({ params, searchParams }: Props) {}
+    // Transform slug to readable title with type safety
+    const title = transformSlugToTitle(slug)
+
+    return {
+        title: `${title}`,
+        description: `Learn more about ${title}`,
+        openGraph: {
+            title: `${title}`,
+            description: `Learn more about ${title}`,
+            type: 'website',
+        },
+        twitter: {
+            card: 'summary',
+            title: `${title}`,
+            description: `Learn more about ${title}`,
+        },
+    }
+}
+
+function transformSlugToTitle(slug: string): string {
+    if (!slug || typeof slug !== 'string') {
+        return 'Product'
+    }
+
+    return slug
+        .split('-')
+        .map(word => {
+            if (word.length === 0) return ''
+            return word.charAt(0).toUpperCase() + word.slice(1).toUpperCase()
+        })
+        .filter(word => word.length > 0) // Remove empty words
+        .join(' ')
+}
 
 const containerVariants = {
     hidden: { opacity: 0 },

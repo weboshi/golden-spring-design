@@ -22,7 +22,7 @@ export default function About() {
         <main>
             < Navigation />
             <Spacer />
-            <div className="block about-block">
+            <div className="hero-block about-block">
                 <div className="block-inner left">
 
                     <motion.div className="block-content"

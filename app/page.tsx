@@ -9,7 +9,7 @@ import FunctionTwo from "../public/images/function-2.jpg";
 import FunctionThree from "../public/images/function-3.jpg";
 import FunctionFour from "../public/images/function-4.jpg";
 import { Metadata } from 'next';
- 
+
 export const metadata: Metadata = {
   title: 'Golden Spring Designs | Premium Shower Door Design & Manufacturing',
 };
@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <main>
       < Navigation />
-      <section className="block home">
+      <section className="hero-block home">
 
-          <div className="block-inner right">
-            <motion.div
+        <div className="block-inner right">
+          <motion.div
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -30,11 +30,11 @@ export default function Home() {
             }>
             <h1>Golden Spring Designs</h1>
             <p>Premium Shower Door Design & Manufacturing</p>
-            </motion.div>
+          </motion.div>
 
-          </div>
+        </div>
       </section>
-      <section className="block function">
+      <section className="hero-block function">
         <div className="block-inner left">
           <motion.div className="block-content"
             initial={{ y: 20, opacity: 0 }}
@@ -70,10 +70,10 @@ export default function Home() {
       </section>
       <section className="three-block">
         <motion.div className="three-block-single"
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ ease: "easeInOut", duration: 0.75, delay: .5 }}
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ ease: "easeInOut", duration: 0.75, delay: .5 }}
         >
           <div className="single-upper">
             <Image src={FunctionTwo}
@@ -91,11 +91,11 @@ export default function Home() {
           </div>
         </motion.div>
         <motion.div className="three-block-single"
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ ease: "easeInOut", duration: 0.75, delay: .75 }
-        }>
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ ease: "easeInOut", duration: 0.75, delay: .75 }
+          }>
           <div className="single-upper">
             <Image src={FunctionThree}
               className="door-image"
@@ -112,11 +112,11 @@ export default function Home() {
           </div>
         </motion.div>
         <motion.div className="three-block-single"
-        initial={{ y: 20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ ease: "easeInOut", duration: 0.75, delay: 1 }
-        }>
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ ease: "easeInOut", duration: 0.75, delay: 1 }
+          }>
           <div className="single-upper">
             <Image src={FunctionFour}
               className="door-image"
@@ -134,8 +134,8 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-      
-      <section className="block eco">
+
+      <section className="hero-block eco">
         <div className="block-inner left">
         </div>
         <div className="block-inner right">
@@ -156,7 +156,7 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      <section className="block transform">
+      <section className="hero-block transform">
         <div className="block-inner left">
           <motion.div className="block-content"
             initial={{ y: 20, opacity: 0 }}
@@ -188,7 +188,7 @@ export default function Home() {
 
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </main>
   );
 }

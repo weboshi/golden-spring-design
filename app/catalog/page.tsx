@@ -17,7 +17,7 @@ export default function Catalog() {
         <main>
             < Navigation />
             <Spacer />
-            <div className="block catalog">
+            <div className="hero-block catalog">
                 <div className="block-inner left">
                     <motion.div className="block-content"
                         initial={{ y: 20, opacity: 0 }}

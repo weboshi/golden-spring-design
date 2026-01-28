@@ -12,9 +12,9 @@ import { Metadata } from "next";
 
 // Define the page props interface
 interface PageProps {
-    params: {
+    params: Promise<{
         slug: string
-    }
+    }>
 }
 
 // Type-safe metadata generation

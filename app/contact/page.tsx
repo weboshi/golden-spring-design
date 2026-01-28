@@ -9,7 +9,7 @@ import Form from "../components/form/Hubspotcontactform";
 
 
 export const metadata: Metadata = {
-    title: 'About',
+    title: 'Contact',
 };
 
 

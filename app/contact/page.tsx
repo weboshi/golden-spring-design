@@ -18,7 +18,7 @@ export default function Contact() {
         <main>
             < Navigation />
             <Spacer />
-            <div className="mx-auto p-6 w-[70%]">
+            <div className="mx-auto p-6 lg:w-[70%]">
                 <h1 className="mb-6 text-2xl font-bold text-center">Contact Us</h1>
                 <Form />
             </div>

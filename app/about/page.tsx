@@ -9,9 +9,12 @@ import aboutone from "../../public/images/about-1.png";
 import about2 from "../../public/images/about-2.png";
 import about3 from "../../public/images/about-3.png";
 import aboutfour from "../../public/images/about-4.png";
+import { Metadata } from "next";
 
 
-
+export const metadata: Metadata = {
+    title: 'About',
+};
 
 
 export default function About() {
@@ -19,7 +22,7 @@ export default function About() {
         <main>
             < Navigation />
             <Spacer />
-            <div className="block about-block">
+            <div className="hero-block about-block">
                 <div className="block-inner left">
 
                     <motion.div className="block-content"

@@ -290,7 +290,7 @@ h1 {
   margin: 1rem 0;
 }
 
-.block {
+.hero-block {
   display: flex;
   height: 100vh;
 
@@ -408,7 +408,7 @@ h1 {
 
 // Homepage
 
-.block {
+.hero-block {
   &.home {
     div {
       width: auto;

@@ -4,10 +4,13 @@ import Footer from "../components/footer";
 import Spacer from "../components/spacer";
 import * as motion from "motion/react-client";
 import ContactImage from "../../public/images/products/PC-S121B-SP-1.jpg"
+import { Metadata } from "next";
+import Form from "../components/form/Hubspotcontactform";
 
 
-
-
+export const metadata: Metadata = {
+    title: 'About',
+};
 
 
 export default function Contact() {
@@ -15,32 +18,9 @@ export default function Contact() {
         <main>
             < Navigation />
             <Spacer />
-            <div className="block catalog">
-                <div className="block-inner left">
-                    <motion.div className="block-content"
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ ease: "easeInOut", duration: 0.75 }}
-                    >
-                        <h1 className="left-header">Contact Us</h1>
-                        <p>For quotes or inquiries, contact support@goldenspringdesigns.com</p>
-                    </motion.div>
-                </div>
-                <div className="block-inner right">
-                    <motion.div className="block-content"
-                        initial={{ y: 20, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ ease: "easeInOut", duration: 0.75 }}
-                    >
-                        <Image src={ContactImage}
-                            alt=""
-                            sizes="100vw"
-                            style={{
-                                width: '100%',
-                                height: 'auto',
-                            }} />
-                    </motion.div>
-                </div>
+            <div className="mx-auto p-6 lg:w-[70%]">
+                <h1 className="mb-6 text-2xl font-bold text-center">Contact Us</h1>
+                <Form />
             </div>
             <Footer />
         </main>

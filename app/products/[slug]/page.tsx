@@ -8,6 +8,52 @@ import fs from 'fs';
 import path from 'path';
 import { Product } from "../productsInterface";
 import { ImageObject } from "../productsInterface";
+import { Metadata } from "next";
+
+// Define the page props interface
+interface PageProps {
+    params: {
+        slug: string
+    }
+}
+
+// Type-safe metadata generation
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params
+
+    // Transform slug to readable title with type safety
+    const title = transformSlugToTitle(slug)
+
+    return {
+        title: `${title}`,
+        description: `Learn more about ${title}`,
+        openGraph: {
+            title: `${title}`,
+            description: `Learn more about ${title}`,
+            type: 'website',
+        },
+        twitter: {
+            card: 'summary',
+            title: `${title}`,
+            description: `Learn more about ${title}`,
+        },
+    }
+}
+
+function transformSlugToTitle(slug: string): string {
+    if (!slug || typeof slug !== 'string') {
+        return 'Product'
+    }
+
+    return slug
+        .split('-')
+        .map(word => {
+            if (word.length === 0) return ''
+            return word.charAt(0).toUpperCase() + word.slice(1).toUpperCase()
+        })
+        .filter(word => word.length > 0) // Remove empty words
+        .join(' ')
+}
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -97,7 +143,7 @@ export default async function ProductsPage({ params }: ProductPageProps) {
         <main>
             <Navigation />
             <Spacer />
-            <motion.div 
+            <motion.div
                 className="products-container"
                 variants={containerVariants}
                 initial="hidden"
@@ -107,11 +153,11 @@ export default async function ProductsPage({ params }: ProductPageProps) {
                     <Link href="/products" className="slug-link">Back to Products</Link>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="products-block products-slug"
                     variants={containerVariants}
                 >
-                    <motion.div 
+                    <motion.div
                         className="products-block-left"
                         variants={productVariants}
                     >
@@ -123,12 +169,12 @@ export default async function ProductsPage({ params }: ProductPageProps) {
                         <span>{product.magnetic && "Magnetic"}</span>
                         <span>Profile: {product.profile}</span>
                     </motion.div>
-                    
-                    <motion.div 
+
+                    <motion.div
                         className="products-block-right"
                         variants={containerVariants}
                     >
-                        <motion.div 
+                        <motion.div
                             className="products-top"
                             variants={imageVariants}
                         >
@@ -141,8 +187,8 @@ export default async function ProductsPage({ params }: ProductPageProps) {
                                 />
                             </div>
                         </motion.div>
-                        
-                        <motion.div 
+
+                        <motion.div
                             className="products-bottom"
                             variants={containerVariants}
                         >

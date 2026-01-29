@@ -184,7 +184,7 @@ export default function HubSpotContactForm() {
             {/* Phone */}
             <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-                    Phone Number <span className="text-red-500">*</span>
+                    Phone Number
                 </label>
                 <input
                     type="tel"
@@ -192,7 +192,6 @@ export default function HubSpotContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    required
                     className="mt-1 block w-full rounded-md border text-black border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
             </div>
@@ -200,7 +199,7 @@ export default function HubSpotContactForm() {
             {/* Company */}
             <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700">
-                    Company Name <span className="text-red-500">*</span>
+                    Company Name
                 </label>
                 <input
                     type="text"
@@ -208,7 +207,6 @@ export default function HubSpotContactForm() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    required
                     className="mt-1 block w-full rounded-md text-black border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 />
             </div>
@@ -216,14 +214,13 @@ export default function HubSpotContactForm() {
             {/* Customer Type */}
             <div>
                 <label htmlFor="customerType" className="block text-sm font-medium text-gray-700">
-                    Customer Type <span className="text-red-500">*</span>
+                    Customer Type
                 </label>
                 <select
                     id="customerType"
                     name="customerType"
                     value={formData.customerType}
                     onChange={handleChange}
-                    required
                     className="mt-1 block w-full rounded-md border text-black border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                 >
                     <option value="">Select one...</option>
